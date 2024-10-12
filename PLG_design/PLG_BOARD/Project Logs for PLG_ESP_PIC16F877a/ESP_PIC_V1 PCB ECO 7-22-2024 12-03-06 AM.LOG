@@ -1,0 +1,82 @@
+Removed Pin From Net: NetName=+5 Pin=P2-1
+Change Component DesignItemId : Designator=CP5 Old DesignItemId=T? NHÔM 220UF 16V New DesignItemId=T? NHÔM 220UF 16V
+Change Component DesignItemId : Designator=CP6 Old DesignItemId=T? NHÔM 220UF 16V New DesignItemId=T? NHÔM 220UF 16V
+Change Component Designator: OldDesignator=P? NewDesignator=P1
+Change Component Description : Designator=JP3 Old Description=C?m New Description=C?m
+Change Component Description : Designator=oled Old Description=C?m New Description=C?m
+Change Component Description : Designator=UART_2 Old Description=C?m New Description=C?m
+Change Component Description : Designator=C1 Old Description=CAP 0805 KHÔNG PHÂN C?C SMD New Description=CAP 0805 KHÔNG PHÂN C?C SMD
+Change Component Description : Designator=C7 Old Description=CAP 0805 KHÔNG PHÂN C?C SMD New Description=CAP 0805 KHÔNG PHÂN C?C SMD
+Change Component Description : Designator=C8 Old Description=CAP 0805 KHÔNG PHÂN C?C SMD New Description=CAP 0805 KHÔNG PHÂN C?C SMD
+Change Component Description : Designator=C12 Old Description=CAP 0805 KHÔNG PHÂN C?C SMD New Description=CAP 0805 KHÔNG PHÂN C?C SMD
+Change Component Description : Designator=C13 Old Description=CAP 0805 KHÔNG PHÂN C?C SMD New Description=CAP 0805 KHÔNG PHÂN C?C SMD
+Change Component Description : Designator=C14 Old Description=CAP 0805 KHÔNG PHÂN C?C SMD New Description=CAP 0805 KHÔNG PHÂN C?C SMD
+Change component parameters: Designator = "UU1"; Footprint = "UU10.5"; UniqueID = "\KQUQYCJL"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Parameter 1"; Value = "Cu?n l?c UU0.8 7*8"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP3"; Footprint = "JP 1x6 DT"; UniqueID = "\HRDNKNCH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ma_Hang"; Value = "MH000903"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ten_Linh_Kien"; Value = "Jump Ðon Ð?c 2.54MM 1x40P Th?ng 11MM"; VariantName = "[No Variations]"
+Change component parameters: Designator = "OLED"; Footprint = "JP 1x4 DT"; UniqueID = "\RMAYENIH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ma_Hang"; Value = "MH000903"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ten_Linh_Kien"; Value = "Jump Ðon Ð?c 2.54MM 1x40P Th?ng 11MM"; VariantName = "[No Variations]"
+Change component parameters: Designator = "UART_2"; Footprint = "JP 1x4 DT"; UniqueID = "\TAPOAYFU"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ma_Hang"; Value = "MH000903"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ten_Linh_Kien"; Value = "Jump Ðon Ð?c 2.54MM 1x40P Th?ng 11MM"; VariantName = "[No Variations]"
+Added Component: Designator=P3(BIG_Header 2)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P4(BIG_Header 8)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R33(RES 0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "RESISTOR  1/4W 4.7K"; VariantName = "[No Variations]"
+Added Component: Designator=R34(RES 0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "EU_RoHS_Compliance"; Value = "Compliant with Exemptions"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "2-2176053-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power_Rating"; Value = ".25 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = ".36"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "RES 0805 SMD"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=COM-IN Pin=P1-2
+Added Pin To Net: NetName=DC+ Pin=P3-1
+Added Pin To Net: NetName=DC- Pin=P3-2
+Added Pin To Net: NetName=DO3 Pin=P4-1
+Added Pin To Net: NetName=DO2 Pin=P4-2
+Added Pin To Net: NetName=DO1 Pin=P4-3
+Added Pin To Net: NetName=+5 Pin=R33-2
+Added Pin To Net: NetName=GND Pin=R34-2
+Added Pin To Net: NetName=ADC Pin=IC1-19
+Added Pin To Net: NetName=ADC Pin=P2-2
+Added Net: Name=ADC
+Added Pin To Net: NetName=PWM Pin=IC1-36
+Added Pin To Net: NetName=PWM Pin=P2-1
+Added Pin To Net: NetName=PWM Pin=R34-1
+Added Net: Name=PWM
+Added Pin To Net: NetName=RD6 Pin=IC1-4
+Added Pin To Net: NetName=RD6 Pin=P1-1
+Added Pin To Net: NetName=RD6 Pin=R33-1
+Added Net: Name=RD6
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component P3 BIG_Header 2
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component P4 BIG Heager 8
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component R33 4.7K
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component R34 10K

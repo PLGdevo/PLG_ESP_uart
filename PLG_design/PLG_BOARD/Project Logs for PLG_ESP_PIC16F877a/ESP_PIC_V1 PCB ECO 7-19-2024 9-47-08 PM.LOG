@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=+5 Pin=UART_P-2
+Removed Pin From Net: NetName=GND Pin=UART_P-3
+Removed Pin From Net: NetName=RX2 Pin=UART_P-4
+Removed Pin From Net: NetName=TX2 Pin=UART_P-5
+Removed Member From Class: ClassName=ESP_PIC_V2 Member=UART_P
+Added Component: Designator=UART_2(JP 1x4 DT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000903"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Jump Ðon Ð?c 2.54MM 1x40P Th?ng 11MM"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+5 Pin=UART_2-1
+Added Pin To Net: NetName=GND Pin=UART_2-2
+Added Pin To Net: NetName=RX2 Pin=UART_2-3
+Added Pin To Net: NetName=TX2 Pin=UART_2-4
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component oled JP 1x4 2.54
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component UART_2 JP 1x4 2.54
+Added Room: Name=ESP_PIC_V2

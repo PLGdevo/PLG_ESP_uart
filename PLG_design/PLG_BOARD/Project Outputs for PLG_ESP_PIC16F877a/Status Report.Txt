@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [PLG_ESP_PIC16F877a.PrjPCB]
+   Generated File[ESP_PIC_V1-RoundHoles.TXT]
+   Generated File[ESP_PIC_V1-SlotHoles.TXT]
+   Generated File[ESP_PIC_V1.LDP]
+   Generated File[ESP_PIC_V1.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 10:44:59 AM On 7/25/2024

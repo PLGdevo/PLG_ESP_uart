@@ -1,0 +1,10 @@
+Added Component: Designator=P?(BIG_Header 9)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P?(BIG_Header 2)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=P?-1
+Added Pin To Net: NetName=+5 Pin=P?-2
+Added Pin To Net: NetName=VDD_3.3V Pin=P?-3
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component P? BIG Heager 8+
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component P? BIG_Header 2
+Added Room: Name=ESP_PIC_V2

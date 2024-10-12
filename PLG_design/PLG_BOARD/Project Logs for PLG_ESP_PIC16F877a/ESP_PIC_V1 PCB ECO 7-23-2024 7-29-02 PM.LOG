@@ -1,0 +1,78 @@
+Removed Pin From Net: NetName=Buzzer Pin=4-1
+Removed Pin From Net: NetName=+5 Pin=4-2
+Removed Pin From Net: NetName=Net4_3 Pin=4-3
+Removed Pin From Net: NetName=Net4_3 Pin=BUZZER-1
+Removed Pin From Net: NetName=GND Pin=BUZZER-2
+Removed Pin From Net: NetName=COM_OUT Pin=C2-1
+Removed Pin From Net: NetName=COM_OUT Pin=C15-1
+Removed Pin From Net: NetName=GND Pin=LED9-2
+Removed Pin From Net: NetName=Buzzer Pin=MCU2-5
+Removed Pin From Net: NetName=DC+ Pin=P3-2
+Removed Pin From Net: NetName=DO3 Pin=P4-1
+Removed Pin From Net: NetName=DO2 Pin=P4-2
+Removed Pin From Net: NetName=DO1 Pin=P4-3
+Removed Pin From Net: NetName=GND Pin=R35-1
+Removed Pin From Net: NetName=Buzzer Pin=R35-2
+Removed Pin From Net: NetName=COM_OUT Pin=RL1-3
+Removed Pin From Net: NetName=COM_OUT Pin=RL2-3
+Removed Member From Class: ClassName=ESP_PIC_V2 Member=4
+Removed Member From Class: ClassName=ESP_PIC_V2 Member=BUZZER
+Removed Member From Class: ClassName=ESP_PIC_V2 Member=LED9
+Removed Member From Class: ClassName=ESP_PIC_V2 Member=R35
+Change Component DesignItemId : Designator=CP5 Old DesignItemId=T? NHÔM 220UF 16V New DesignItemId=T? NHÔM 220UF 16V
+Change Component DesignItemId : Designator=CP6 Old DesignItemId=T? NHÔM 220UF 16V New DesignItemId=T? NHÔM 220UF 16V
+Change Component Designator: OldDesignator=MCU1 NewDesignator=ESP1
+Change Component Designator: OldDesignator=MCU2 NewDesignator=IC1
+Change Component Designator: OldDesignator=RESET NewDesignator=SW2
+Change Component Description : Designator=JP3 Old Description=C?m New Description=C?m
+Change Component Description : Designator=oled Old Description=C?m New Description=C?m
+Change Component Description : Designator=UART_2 Old Description=C?m New Description=C?m
+Change Component Description : Designator=C1 Old Description=CAP 0805 KHÔNG PHÂN C?C SMD New Description=CAP 0805 KHÔNG PHÂN C?C SMD
+Change Component Description : Designator=C7 Old Description=CAP 0805 KHÔNG PHÂN C?C SMD New Description=CAP 0805 KHÔNG PHÂN C?C SMD
+Change Component Description : Designator=C8 Old Description=CAP 0805 KHÔNG PHÂN C?C SMD New Description=CAP 0805 KHÔNG PHÂN C?C SMD
+Change Component Description : Designator=C12 Old Description=CAP 0805 KHÔNG PHÂN C?C SMD New Description=CAP 0805 KHÔNG PHÂN C?C SMD
+Change Component Description : Designator=C13 Old Description=CAP 0805 KHÔNG PHÂN C?C SMD New Description=CAP 0805 KHÔNG PHÂN C?C SMD
+Change Component Description : Designator=C14 Old Description=CAP 0805 KHÔNG PHÂN C?C SMD New Description=CAP 0805 KHÔNG PHÂN C?C SMD
+Change component parameters: Designator = "UU1"; Footprint = "UU10.5"; UniqueID = "\KQUQYCJL"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Parameter 1"; Value = "Cu?n l?c UU0.8 7*8"; VariantName = "[No Variations]"
+Change component parameters: Designator = "JP3"; Footprint = "JP 1x6 DT"; UniqueID = "\HRDNKNCH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ma_Hang"; Value = "MH000903"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ten_Linh_Kien"; Value = "Jump Ðon Ð?c 2.54MM 1x40P Th?ng 11MM"; VariantName = "[No Variations]"
+Change component parameters: Designator = "OLED"; Footprint = "JP 1x4 DT"; UniqueID = "\RMAYENIH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ma_Hang"; Value = "MH000903"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ten_Linh_Kien"; Value = "Jump Ðon Ð?c 2.54MM 1x40P Th?ng 11MM"; VariantName = "[No Variations]"
+Change component parameters: Designator = "UART_2"; Footprint = "JP 1x4 DT"; UniqueID = "\TAPOAYFU"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ma_Hang"; Value = "MH000903"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ten_Linh_Kien"; Value = "Jump Ðon Ð?c 2.54MM 1x40P Th?ng 11MM"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=Buzzer Pin=C2-1
+Added Pin To Net: NetName=Net4_3 Pin=C15-1
+Added Pin To Net: NetName=DC- Pin=P3-2
+Added Pin To Net: NetName=DC+ Pin=P4-1
+Added Pin To Net: NetName=DC+ Pin=P4-2
+Added Pin To Net: NetName=DO3 Pin=P4-3
+Added Pin To Net: NetName=DO2 Pin=P4-5
+Added Pin To Net: NetName=Buzzer Pin=P4-6
+Added Pin To Net: NetName=DO1 Pin=P4-7
+Added Pin To Net: NetName=Net4_3 Pin=P4-8
+Added Pin To Net: NetName=GND Pin=R34-2
+Added Pin To Net: NetName=Net4_3 Pin=RL1-3
+Added Pin To Net: NetName=Buzzer Pin=RL2-3
+Change Net Name : Old Net Name=Buzzer New Net Name=COM_OUT2
+Change Net Name : Old Net Name=COM_OUT New Net Name=COM_OUT3
+Change Net Name : Old Net Name=Net4_3 New Net Name=COM_OUT1

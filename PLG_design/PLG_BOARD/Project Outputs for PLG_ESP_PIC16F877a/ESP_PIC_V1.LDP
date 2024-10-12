@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: P:\Altium\CONTEST_PLG_2024\PLG_ESP_PIC16F877A\PLG_BOARD\ESP_PIC_V1.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=esp_pic_v1-roundholes.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=esp_pic_v1-slotholes.txt|DrillLayers=gtl,gbl

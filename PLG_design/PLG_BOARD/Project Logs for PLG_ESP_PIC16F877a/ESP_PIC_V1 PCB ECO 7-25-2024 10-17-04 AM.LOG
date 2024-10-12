@@ -1,0 +1,23 @@
+Change Component Designator: OldDesignator=R? NewDesignator=R36
+Change Component Designator: OldDesignator=RESET NewDesignator=SW2
+Added Component: Designator=LED9(LEDblue 0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R35(RES 0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "EU_RoHS_Compliance"; Value = "Compliant with Exemptions"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "2-2176053-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power_Rating"; Value = ".25 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = ".36"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "RES 0805 SMD"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=LED9-2
+Added Pin To Net: NetName=PWM Pin=R35-1
+Added Pin To Net: NetName=NetLED9_1 Pin=LED9-1
+Added Pin To Net: NetName=NetLED9_1 Pin=R35-2
+Added Net: Name=NetLED9_1
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component LED9 LED_blue 0805
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component R35 RES 0805

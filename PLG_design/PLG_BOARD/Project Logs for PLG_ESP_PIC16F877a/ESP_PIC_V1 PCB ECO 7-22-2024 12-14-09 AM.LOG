@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=GND Pin=R34-2
+Added Component: Designator=LED9(LEDBLUE 0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "LED SMD"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=LED9-2
+Added Pin To Net: NetName=NetLED9_1 Pin=LED9-1
+Added Pin To Net: NetName=NetLED9_1 Pin=R34-2
+Added Net: Name=NetLED9_1
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component LED9 LED?

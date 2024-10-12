@@ -1,0 +1,139 @@
+Removed Pin From Net: NetName=GND_PI Pin=PC1-2
+Added Component: Designator=?(SOT23-3)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "2SC1815-SMD"; VariantName = "[No Variations]"
+Added Component: Designator=C?(CN2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=D?(SS210)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/SS210/Taiwan+Semiconductor/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Taiwan Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SS210"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SMD-2-2 Avago"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/SS210/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SS210/Taiwan+Semiconductor/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "SS210"; VariantName = "[No Variations]"
+Added Component: Designator=IPEX(DE ANTEN ESP)
+Add component. Clean all parameters for all variants
+Added Component: Designator=LED?(LED_SMD0805_RED - duplicate)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "LED SMD"; VariantName = "[No Variations]"
+Added Component: Designator=oled(JP 1x4 CT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH004006"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Jump Ðon Cái 2.54MM 1x20P Th?ng"; VariantName = "[No Variations]"
+Added Component: Designator=PC?(OPTO_4-SMD)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "PC817"; VariantName = "[No Variations]"
+Added Component: Designator=R?(RES 0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "EU_RoHS_Compliance"; Value = "Compliant with Exemptions"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "2-2176053-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power_Rating"; Value = ".25 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = ".36"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "RES 0805 SMD"; VariantName = "[No Variations]"
+Added Component: Designator=R?(RES 0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "EU_RoHS_Compliance"; Value = "Compliant with Exemptions"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "2-2176053-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power_Rating"; Value = ".25 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = ".36"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "RES 0805 SMD"; VariantName = "[No Variations]"
+Added Component: Designator=R?(RES 0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "EU_RoHS_Compliance"; Value = "Compliant with Exemptions"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "2-2176053-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power_Rating"; Value = ".25 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = ".36"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "RES 0805 SMD"; VariantName = "[No Variations]"
+Added Component: Designator=R?(RES 0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "EU_RoHS_Compliance"; Value = "Compliant with Exemptions"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "2-2176053-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power_Rating"; Value = ".25 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = ".36"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "RES 0805 SMD"; VariantName = "[No Variations]"
+Added Component: Designator=RL?(HF46F/005-HS1)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Not in stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/HF46F/005-HS1/Hongfa/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Hongfa"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "HF46F/005-HS1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/HF46F/005-HS1/Hongfa/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "HK46F"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND_PI Pin=?-1
+Added Pin To Net: NetName=+5 Pin=?-2
+Added Pin To Net: NetName=COM_OUT Pin=C?-1
+Added Pin To Net: NetName=DO1 Pin=C?-2
+Added Pin To Net: NetName=GND Pin=D?-A
+Added Pin To Net: NetName=VDD_3.3V Pin=oled-1
+Added Pin To Net: NetName=GND Pin=oled-2
+Added Pin To Net: NetName=SCL Pin=oled-3
+Added Pin To Net: NetName=SDA Pin=oled-4
+Added Pin To Net: NetName=GND Pin=PC1-2
+Added Pin To Net: NetName=GND Pin=PC?-2
+Added Pin To Net: NetName=+5 Pin=PC?-4
+Added Pin To Net: NetName=GND Pin=R?-1
+Added Pin To Net: NetName=GND_PI Pin=R?-2
+Added Pin To Net: NetName=GND_PI Pin=R?-2
+Added Pin To Net: NetName=GND Pin=R?-2
+Added Pin To Net: NetName=GND Pin=RL?-1
+Added Pin To Net: NetName=COM_OUT Pin=RL?-3
+Added Pin To Net: NetName=DO1 Pin=RL?-4
+Change Net Name : Old Net Name=GND_PI New Net Name=Net?_1
+Added Pin To Net: NetName=Net?_3 Pin=?-3
+Added Pin To Net: NetName=Net?_3 Pin=D?-K
+Added Pin To Net: NetName=Net?_3 Pin=LED?-1
+Added Pin To Net: NetName=Net?_3 Pin=RL?-2
+Added Net: Name=Net?_3
+Added Pin To Net: NetName=NetLED?_2 Pin=LED?-2
+Added Pin To Net: NetName=NetLED?_2 Pin=R?-1
+Added Net: Name=NetLED?_2
+Added Pin To Net: NetName=NetPC?_1 Pin=PC?-1
+Added Pin To Net: NetName=NetPC?_1 Pin=R?-1
+Added Net: Name=NetPC?_1
+Added Pin To Net: NetName=NetPC?_3 Pin=PC?-3
+Added Pin To Net: NetName=NetPC?_3 Pin=R?-1
+Added Net: Name=NetPC?_3
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component ? 2SC1815
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component C? 104
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component D?
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component IPEX
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component LED?
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component oled JP 1x4 2.54
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component PC? PC817-?
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component R? 1K
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component R? 1K
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component R? RES 0805
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component R? 1K
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component RL?
+Added Room: Name=ESP_PIC_V2

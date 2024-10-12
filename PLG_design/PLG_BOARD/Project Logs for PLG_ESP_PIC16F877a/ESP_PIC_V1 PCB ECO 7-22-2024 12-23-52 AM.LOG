@@ -1,0 +1,31 @@
+Added Component: Designator=4(SOT23-3)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "2SC1815-SMD"; VariantName = "[No Variations]"
+Added Component: Designator=BUZZER1(Coi Chip Speacker)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "Speaker"; VariantName = "[No Variations]"
+Added Component: Designator=R35(RES 0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "EU_RoHS_Compliance"; Value = "Compliant with Exemptions"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "2-2176053-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power_Rating"; Value = ".25 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = ".36"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "RES 0805 SMD"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+5 Pin=4-2
+Added Pin To Net: NetName=GND Pin=BUZZER1-2
+Added Pin To Net: NetName=GND Pin=R35-1
+Added Pin To Net: NetName=Buzzer Pin=4-1
+Added Pin To Net: NetName=Buzzer Pin=IC1-5
+Added Pin To Net: NetName=Buzzer Pin=R35-2
+Added Net: Name=Buzzer
+Added Pin To Net: NetName=Net4_3 Pin=4-3
+Added Pin To Net: NetName=Net4_3 Pin=BUZZER1-1
+Added Net: Name=Net4_3
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component 4 2SC1815
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component BUZZER1 BUZZER
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component R35 RES 0805

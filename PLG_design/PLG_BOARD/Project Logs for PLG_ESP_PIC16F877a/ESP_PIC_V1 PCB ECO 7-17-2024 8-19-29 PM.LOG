@@ -1,0 +1,13 @@
+Added Pin To Net: NetName=ta1 Pin=C9-2
+Added Pin To Net: NetName=reset Pin=C10-1
+Added Pin To Net: NetName=ta2 Pin=C11-2
+Added Pin To Net: NetName=SDA Pin=ESP1-33
+Added Pin To Net: NetName=SCL Pin=ESP1-36
+Added Pin To Net: NetName=reset Pin=JP3-1
+Added Pin To Net: NetName=rb7 Pin=JP3-4
+Added Pin To Net: NetName=rb6 Pin=JP3-5
+Added Pin To Net: NetName=reset Pin=R8-1
+Added Pin To Net: NetName=reset Pin=SW2-2
+Added Pin To Net: NetName=reset Pin=UART_P-1
+Added Pin To Net: NetName=ta2 Pin=Y2-1
+Added Pin To Net: NetName=ta1 Pin=Y2-2

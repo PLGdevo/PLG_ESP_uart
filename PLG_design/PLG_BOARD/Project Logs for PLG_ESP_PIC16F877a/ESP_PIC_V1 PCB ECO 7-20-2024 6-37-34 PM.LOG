@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=IN-D1 Pin=P?-3
+Added Pin To Net: NetName=IN-D2 Pin=P?-4
+Added Pin To Net: NetName=IN-D3 Pin=P?-5
+Added Room: Name=ESP_PIC_V2

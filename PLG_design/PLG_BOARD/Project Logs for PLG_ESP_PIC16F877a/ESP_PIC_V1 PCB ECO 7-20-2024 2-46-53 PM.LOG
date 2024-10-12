@@ -1,0 +1,16 @@
+Change Component Footprint: Designator=oled Old Footprint=JP 1x4 CT New Footprint=JP 1x4 DT
+Change component parameters: Designator = "OLED"; Footprint = "JP 1x4 DT"; UniqueID = "\RMAYENIH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ma_Hang"; Value = "MH000903"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ten_Linh_Kien"; Value = "Jump Ðon Ð?c 2.54MM 1x40P Th?ng 11MM"; VariantName = "[No Variations]"
+Added Component: Designator=R20(RES 0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "RESISTOR  1/4W 1K"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=IN-D1 Pin=R20-1
+Added Pin To Net: NetName=NetOPPTO1_2 Pin=R20-2
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component R20 1K
+Added Room: Name=ESP_PIC_V2

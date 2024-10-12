@@ -1,0 +1,10 @@
+Removed Member From Class: ClassName=ESP_PIC_V2 Member=P?
+Change Component Designator: OldDesignator=P? NewDesignator=P2
+Added Component: Designator=P1(BIG_Header 9)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=VDD_3.3V Pin=P1-7
+Added Pin To Net: NetName=+5 Pin=P1-8
+Added Pin To Net: NetName=GND Pin=P1-9
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component P1 BIG Heager 8+
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component P2 BIG_Header 2
+Added Room: Name=ESP_PIC_V2

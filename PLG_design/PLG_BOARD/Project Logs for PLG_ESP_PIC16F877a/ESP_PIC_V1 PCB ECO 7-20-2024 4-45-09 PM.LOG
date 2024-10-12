@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=GND Pin=P1-1
+Removed Pin From Net: NetName=+5 Pin=P1-2
+Removed Pin From Net: NetName=VDD_3.3V Pin=P1-3
+Removed Member From Class: ClassName=ESP_PIC_V2 Member=P1
+Added Component: Designator=P?(BIG_Header 8)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=VDD_3.3V Pin=P?-6
+Added Pin To Net: NetName=+5 Pin=P?-7
+Added Pin To Net: NetName=GND Pin=P?-8
+Added Member To Class: ClassName=ESP_PIC_V2 Member=Component P? BIG Heager 8
+Added Room: Name=ESP_PIC_V2
