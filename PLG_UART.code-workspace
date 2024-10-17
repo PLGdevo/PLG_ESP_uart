@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"name": "PLG_UART",
+			"path": "."
+		},
+		{
+			"name": "MINICAR-2024-main",
+			"path": "../../../PLG_RACING_2024/MINICAR-2024-main/MINICAR-2024-main"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"array": "cpp",
+			"deque": "cpp",
+			"list": "cpp",
+			"string": "cpp",
+			"unordered_map": "cpp",
+			"unordered_set": "cpp",
+			"vector": "cpp",
+			"string_view": "cpp",
+			"initializer_list": "cpp",
+			"*.tcc": "cpp"
+		}
+	}
+}

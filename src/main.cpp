@@ -1,11 +1,13 @@
 #include <setup.h>
 
-
 void exeCmd(String message)
 {
   if (message.startsWith("CH"))
   {
-    display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+    // display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+    delay(200);
+    SENTLN("d");
+    ERa.virtualWrite(V0, value);
   }
 }
 void uartPIC()
@@ -18,7 +20,7 @@ void uartPIC()
     {
       exeCmd(cmd);
       DEBUG_PRINTLN(" PIC_gui");
-      DEBUG_PRINTF("%s",cmd);
+      DEBUG_PRINTF("%s", cmd);
       cmd = "";
     } // end read uart2
   }
@@ -57,11 +59,9 @@ void oled()
   display.setCursor(35, 20);
   display.println(data1);
   display.setCursor(0, 30);
-  display.printf("%S",cmd);
-  // display.setCursor(0, 40);
-  // display.println(pass);
-
-  // Update the display with the buffer
+  display.printf(ERA_PSTR("SSID: %s"), ssid);
+  display.setCursor(0, 40);
+  display.printf(ERA_PSTR("PASS: %s"), pass);
   display.display();
 }
 ERA_WRITE(V0)
@@ -100,40 +100,52 @@ ERA_WRITE(V1)
     SENTLN("R2 0");
   }
 }
-////////len chuagit 
+////////len chuagit
 
 void setup()
 {
   Serial.begin(115200);
   Serial2.begin(115200);
- // ERa.setScanWiFi(true);
-  ERa.begin(ssid, pass);
-  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
-  /* Setup timer called function every second */
-  timer.setInterval(1000L, timerEvent);
-  DEBUG_PRINT("-----------------PLG_start----------\n\r");
-  // if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C))
-  // {
-  //   DEBUG_PRINT(F("---------SSD1306 allocation failed------"));
-  //   for (;;)
-  //     ;
-  // }
 
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
   display.clearDisplay();
   display.setTextSize(1); // Draw 2X-scale text
   display.setRotation(2);
   display.setTextColor(SSD1306_WHITE); // Draw white text
-  display.setCursor(0, 5);             // Start at top-left corner
+  display.setCursor(0, 0);             // Start at top-left corner
   display.println(F("PLG.Oled"));
+  display.setCursor(0, 10);
+  display.println("connecting");
+  display.setCursor(5, 20);
+  display.printf(ERA_PSTR("SSID: %s"), ssid);
+  display.setCursor(5, 30);
+ // display.printf(ERA_PSTR("BSSID: %s"),WiFi.SSID(ssid).c_str());
   display.display();
+#if defined(BUTTON_PIN)
+  /* Initializing button. */
+  initButton();
+  /* Enable read/write WiFi credentials */
+  ERa.setPersistent(true);
+#endif
+  ERa.setScanWiFi(true);
+  ERa.begin(ssid, pass);
+  // display.setCursor(0, 10);
+  // display.println(ssid);
+  // display.setCursor(0, 20);
+  // display.println(StateT::STATE_CONNECTING_NETWORK);
+  // display.display();
+  // delay(500);
+
+  timer.setInterval(1000L, timerEvent);
+  DEBUG_PRINT("-----------------PLG_start----------\n\r");
 }
 
 void loop()
 {
 
-  // ERa.run();
-  // oled();
-  // uartPIC();
+  ERa.run();
+  oled();
+  uartPIC();
   // timer.run();
 }
 
