@@ -1,5 +1,12 @@
 #include <setup.h>
-
+void khung_oled()
+{
+  display.drawLine(0, 10, 128, 10, SSD1306_WHITE); //__
+  display.drawLine(0, 20, 128, 20, SSD1306_WHITE); //__
+  display.drawLine(0, 30, 128, 30, SSD1306_WHITE); // __
+  display.drawLine(0, 40, 128, 40, SSD1306_WHITE); // __
+  display.drawLine(34, 0, 34, 64, SSD1306_WHITE);  // |
+}
 void exeCmd(String message)
 {
   if (message.startsWith("CH"))
@@ -48,7 +55,7 @@ void oled()
   display.setTextSize(1);
   display.setRotation(2);
   display.setTextColor(SSD1306_WHITE); // dao nguoc man hinh 180'
-  display.setCursor(30, 0);
+  display.setCursor(35, 0);
   display.println(F("PLG.ERA"));
   display.setCursor(0, 10);
   display.println("RN1");
@@ -59,9 +66,10 @@ void oled()
   display.setCursor(35, 20);
   display.println(data1);
   display.setCursor(0, 30);
-  display.printf(ERA_PSTR("SSID: %s"), ssid);
+  display.printf(ssid);
   display.setCursor(0, 40);
   display.printf(ERA_PSTR("PASS: %s"), pass);
+  khung_oled();
   display.display();
 }
 ERA_WRITE(V0)
@@ -109,44 +117,48 @@ void setup()
 
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
   display.clearDisplay();
-  display.setTextSize(1); // Draw 2X-scale text
+  display.setTextSize(1);
   display.setRotation(2);
-  display.setTextColor(SSD1306_WHITE); // Draw white text
-  display.setCursor(0, 0);             // Start at top-left corner
+  display.setTextColor(SSD1306_WHITE);
+  display.setCursor(35, 0);
   display.println(F("PLG.Oled"));
-  display.setCursor(0, 10);
+  display.setCursor(35, 10);
   display.println("connecting");
   display.setCursor(5, 20);
   display.printf(ERA_PSTR("SSID: %s"), ssid);
   display.setCursor(5, 30);
- // display.printf(ERA_PSTR("BSSID: %s"),WiFi.SSID(ssid).c_str());
+  khung_oled();
+  // display.printf(ERA_PSTR("BSSID: %s"),WiFi.SSID(ssid).c_str());
   display.display();
 #if defined(BUTTON_PIN)
-  /* Initializing button. */
   initButton();
-  /* Enable read/write WiFi credentials */
   ERa.setPersistent(true);
 #endif
   ERa.setScanWiFi(true);
   ERa.begin(ssid, pass);
-  // display.setCursor(0, 10);
-  // display.println(ssid);
-  // display.setCursor(0, 20);
-  // display.println(StateT::STATE_CONNECTING_NETWORK);
-  // display.display();
-  // delay(500);
-
   timer.setInterval(1000L, timerEvent);
   DEBUG_PRINT("-----------------PLG_start----------\n\r");
 }
 
 void loop()
 {
-
   ERa.run();
-  oled();
-  uartPIC();
-  // timer.run();
+  if (ERa.connected())
+  {
+    oled();
+    uartPIC();
+  }
+  else
+  {
+    display.println(F("PLG.Oled"));
+    display.setCursor(35, 10);
+    display.println("on_wifi_confic");
+    display.setCursor(5, 20);
+    display.printf(ERA_PSTR("SSID: %s"), ssid);
+    display.setCursor(5, 30);
+    khung_oled();
+  }
+  
 }
 
 // //   if (Serial2.available())
