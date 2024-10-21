@@ -7,6 +7,7 @@
 #include <ERa.hpp>
 #include <ERa/ERaTimer.hpp>
 #include <Wire.h>
+#include <SPI.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
@@ -15,7 +16,7 @@
 #if defined(BUTTON_PIN)
 // Active low (false), Active high (true)
 #define BUTTON_INVERT false
-#define BUTTON_HOLD_TIMEOUT 5000UL
+#define BUTTON_HOLD_TIMEOUT 3000UL
 
 // This directive is used to specify whether the configuration should be erased.
 // If it's set to true, the configuration will be erased.
@@ -74,13 +75,10 @@ void initButton()
 }
 #endif
 
-/* This function will run every time ERa is connected */
 ERA_CONNECTED()
 {
   ERA_LOG("ERa", "ERa connected!");
 }
-
-/* This function will run every time ERa is disconnected */
 ERA_DISCONNECTED()
 {
   ERA_LOG("ERa", "ERa disconnected!");
@@ -92,8 +90,8 @@ ERaTimer timer;
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
 #define OLED_RESET -1
-//Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
-//  **************************************************************/
+// Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
+//   **************************************************************/
 
 void timerEvent()
 {
@@ -177,8 +175,10 @@ void oled()
   display.setTextSize(1);
   display.setRotation(2);
   display.setTextColor(SSD1306_WHITE); // dao nguoc man hinh 180'
+  display.setCursor(0, 0);
+  display.println(F("PLG"));
   display.setCursor(35, 0);
-  display.println(F("PLG.ERA"));
+  display.println("ERA_RUN");
   display.setCursor(0, 10);
   display.println("RN1");
   display.setCursor(0, 20);
@@ -187,10 +187,7 @@ void oled()
   display.println(data);
   display.setCursor(35, 20);
   display.println(data1);
-  display.setCursor(0, 30);
-  display.printf(ssid);
-  display.setCursor(0, 40);
-  display.printf(ERA_PSTR("PASS: %s"), pass);
+
   khung_oled();
   display.display();
 }
@@ -238,26 +235,30 @@ void setup()
   Serial2.begin(115200);
 
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+  delay(3000);
   display.clearDisplay();
   display.setTextSize(1);
   display.setRotation(2);
   display.setTextColor(SSD1306_WHITE);
+  display.setCursor(0, 0);
+  display.println(F("PLG"));
   display.setCursor(35, 0);
-  display.println(F("PLG.Oled"));
-  display.setCursor(35, 10);
-  display.println("connecting");
- // display.printf("%s", ERaConfig.connected);
+  display.println("CONNECT_STA");
+  display.setCursor(0, 10);
+  display.println("ssid:");
   khung_oled();
   display.display();
+  DEBUG_PRINT("-----------------PLG_start_oled----------\n\r");
+  delay(1000);
 #if defined(BUTTON_PIN)
   initButton();
   ERa.setPersistent(true);
 #endif
-  ERa.setScanWiFi(false);
+  // ERa.setScanWiFi(false);
   ERa.begin(ssid, pass);
-
   timer.setInterval(1000L, timerEvent);
   DEBUG_PRINT("-----------------PLG_start----------\n\r");
+  delay(1000);
 }
 
 void loop()
@@ -267,28 +268,6 @@ void loop()
   {
     oled();
     uartPIC();
-  }
-  else
-  {
-    display.clearDisplay();
-    display.println(F("PLG.Oled"));
-    display.setCursor(35, 10);
-    display.println("on_wifi_confic");
-    display.setCursor(5, 20);
-    display.printf(ERA_PSTR("SSID: %s"), ssid);
-    display.setCursor(5, 30);
-    khung_oled();
-  }
-  if (ERaConfig.connected==false)
-  {
-    display.clearDisplay();
-    display.println(F("PLG.Oled"));
-    display.setCursor(35, 10);
-    display.println("on_wifi_confic");
-    display.setCursor(5, 20);
-    display.printf(ERA_PSTR("SSID: %s"), ssid);
-    display.setCursor(5, 30);
-    khung_oled();
   }
 }
 
