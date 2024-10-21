@@ -17,7 +17,7 @@
 #include <Storage/ERaFlashEsp32.hpp>
 #include <PnP/ERaWeb.hpp>
 #include <Adafruit_SSD1306.h>
-
+#include <Adafruit_GFX.h>
 #if defined(ERA_DETECT_SSL)
 #include <WiFiClientSecure.h>
 #endif
@@ -1767,6 +1767,12 @@ void ERaPnP<Transport>::connectWiFi(const char *ssid, const char *pass)
         ERaWatchdogFeed();
 
         ERA_LOG(TAG, ERA_PSTR("Connecting to %s..."), ssid);
+        display.setTextSize(1);
+        display.setCursor(35, 10);
+        display.println(ssid);
+        display.setCursor(35, 20);
+        display.println(pass);
+        display.display();
         if (this->scanWiFiConnect)
         {
             if (pass && strlen(pass))
@@ -1904,11 +1910,26 @@ void ERaPnP<Transport>::switchToAP()
 
     char ssidAP[64]{0};
     this->getWiFiName(ssidAP);
-    display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+    // display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
     display.clearDisplay();
-    display.println(F("PLG.Oled"));
-    display.setCursor(35, 10);
-    display.println("on_wifi_confic");
+    //  display.drawLine(34, 0, 34, 64, SSD1306_WHITE); // |
+    display.setCursor(0, 0);
+    display.println("PLG");
+    display.setTextSize(1);
+    display.setCursor(35, 0);
+    display.println("WIFI_CONFIC");
+    display.setCursor(40, 10);
+    display.println(ssidAP);
+    display.setCursor(0, 10);
+    display.println("ssidAP");
+    display.setCursor(0, 30);
+    display.println("pass:");
+    display.setCursor(35, 30);
+    display.println(WIFI_AP_PASS);
+    display.setCursor(0, 40);
+    display.println("IP:");
+    display.setCursor(35, 40);
+    display.println("192.168.27.1");
     display.display();
     ERaWatchdogFeed();
     ERaDelay(100);
