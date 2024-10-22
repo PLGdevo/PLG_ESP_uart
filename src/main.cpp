@@ -259,6 +259,8 @@ void setup()
   timer.setInterval(1000L, timerEvent);
   DEBUG_PRINT("-----------------PLG_start----------\n\r");
   delay(1000);
+  SENTLN("R2 0");
+  SENTLN("d");
 }
 
 void loop()
