@@ -10,9 +10,9 @@ String cmd = "";
 void khung_oled()
 {
   display.drawLine(0, 10, 128, 10, SSD1306_WHITE); //__ hang 1 
-  display.drawLine(0, 20, 128, 20, SSD1306_WHITE); //__  hang 2
-  display.drawLine(0, 30, 128, 30, SSD1306_WHITE); // __  hang 3 
-  display.drawLine(0, 40, 128, 40, SSD1306_WHITE); // __  hang 4
+  display.drawLine(0, 20, 128, 20, SSD1306_WHITE); //__ hang 2
+  display.drawLine(0, 30, 128, 30, SSD1306_WHITE); //__ hang 3 
+  display.drawLine(0, 40, 128, 40, SSD1306_WHITE); //__ hang 4
   display.drawLine(34, 0, 34, 64, SSD1306_WHITE);  // |
 }
 void exeCmd(String message)
