@@ -1772,6 +1772,8 @@ void ERaPnP<Transport>::connectWiFi(const char *ssid, const char *pass)
         display.println(ssid);
         display.setCursor(35, 20);
         display.println(pass);
+        display.setCursor(35, 31);
+        display.println("CONNECTING");
         display.display();
         if (this->scanWiFiConnect)
         {
@@ -1823,7 +1825,10 @@ void ERaPnP<Transport>::connectWiFi(const char *ssid, const char *pass)
     }
     this->getTransp().setSSID(ssid);
     ERA_LOG(TAG, ERA_PSTR("Connected to WiFi"));
-
+    display.fillRect(35, 31, SCREEN_WIDTH, 8, SSD1306_BLACK); //  Vẽ một hình chữ nhật đen ở hàng
+    display.setCursor(35, 31);
+    display.println("CONNECTED_WiFi");
+    display.display();
     IPAddress localIP = WiFi.localIP();
     ERA_FORCE_UNUSED(localIP);
     ERA_LOG(TAG, ERA_PSTR("IP: %s"), localIP.toString().c_str());
