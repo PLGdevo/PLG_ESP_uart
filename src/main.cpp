@@ -1,17 +1,19 @@
 #include <setup.h>
 
-
-String data = "";
-string datapic = "";
-String data1 = "";
+// String data = "";
+// string datapic = "";
+// String data1 = "";
+char data[4] = ""; // Dùng mảng char thay vì String
+char data1[4] = "";
+char datapic[4] = "";
 uint8_t value1;
 uint8_t value;
 String cmd = "";
 void khung_oled()
 {
-  display.drawLine(0, 10, 128, 10, SSD1306_WHITE); //__ hang 1 
+  display.drawLine(0, 10, 128, 10, SSD1306_WHITE); //__ hang 1
   display.drawLine(0, 20, 128, 20, SSD1306_WHITE); //__ hang 2
-  display.drawLine(0, 30, 128, 30, SSD1306_WHITE); //__ hang 3 
+  display.drawLine(0, 30, 128, 30, SSD1306_WHITE); //__ hang 3
   display.drawLine(0, 40, 128, 40, SSD1306_WHITE); //__ hang 4
   display.drawLine(34, 0, 34, 64, SSD1306_WHITE);  // |
 }
@@ -42,22 +44,24 @@ void uartPIC()
 }
 void oled()
 {
-  if (value == HIGH)
-  {
-    data = "on";
-  }
-  else // if(value == LOW)
-  {
-    data = "off";
-  }
-  if (value1 == HIGH)
-  {
-    data1 = "on";
-  }
-  else
-  {
-    data1 = "off";
-  }
+  strcpy(data, (value == HIGH) ? "on" : "off"); // Sử dụng strcpy thay cho String
+  strcpy(data1, (value1 == HIGH) ? "on" : "off");
+  // if (value == HIGH)
+  // {
+  //   data = "on";
+  // }
+  // else // if(value == LOW)
+  // {
+  //   data = "off";
+  // }
+  // if (value1 == HIGH)
+  // {
+  //   data1 = "on";
+  // }
+  // else
+  // {
+  //   data1 = "off";
+  // }
 
   display.clearDisplay();
   display.setTextSize(1);
@@ -81,41 +85,18 @@ void oled()
 }
 ERA_WRITE(V0)
 {
-  /* Get value from Virtual Pin 0 and write LED */
   value = param.getInt();
-  // digitalWrite(LED_PIN, value ? HIGH : LOW);
-  if (value == HIGH)
-  {
-    DEBUG_PRINTLN("--------------write data R1------------- ");
-    DEBUG_PRINTLN(value);
-    SENTLN("f");
-  }
-  else
-  {
-    DEBUG_PRINTLN("--------------write data R1------------- ");
-    DEBUG_PRINTLN(value);
-    SENTLN("d");
-  }
+  DEBUG_PRINTLN("--------------write data R1------------- ");
+  DEBUG_PRINTLN(value);
+  SENTLN((value == HIGH) ? "f" : "d");
 }
 ERA_WRITE(V1)
 {
-  /* Get value from Virtual Pin 0 and write LED */
   value1 = param.getInt();
-  // digitalWrite(LED_PIN, value ? HIGH : LOW);
-  if (value1 == HIGH)
-  {
-    DEBUG_PRINTLN("--------------write data R2------------- ");
-    DEBUG_PRINTLN(value1);
-    SENTLN("R2 1");
-  }
-  else
-  {
-    DEBUG_PRINTLN("--------------write data R2------------- ");
-    DEBUG_PRINTLN(value1);
-    SENTLN("R2 0");
-  }
+  DEBUG_PRINTLN("--------------write data R2------------- ");
+  DEBUG_PRINTLN(value1);
+  SENTLN((value1 == HIGH) ? "R2 1" : "R2 0");
 }
-////////len chuagit
 
 void setup()
 {
@@ -123,7 +104,6 @@ void setup()
   Serial2.begin(115200);
 
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
- // delay(3000);
   display.clearDisplay();
   display.setTextSize(1);
   display.setRotation(2);
@@ -138,8 +118,10 @@ void setup()
   display.println("pass:");
   khung_oled();
   display.display();
+
   DEBUG_PRINT("-----------------PLG_start_oled----------\n\r");
   delay(1000);
+
 #if defined(BUTTON_PIN)
   initButton();
   ERa.setPersistent(true);
