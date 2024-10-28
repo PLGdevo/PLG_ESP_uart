@@ -1,9 +1,7 @@
 #include <setup.h>
 
-// String data = "";
-// string datapic = "";
-// String data1 = "";
-char data[4] = ""; // Dùng mảng char thay vì String
+
+char data[4] = "";
 char data1[4] = "";
 char datapic[4] = "";
 uint8_t value1;
@@ -44,24 +42,8 @@ void uartPIC()
 }
 void oled()
 {
-  strcpy(data, (value == HIGH) ? "on" : "off"); // Sử dụng strcpy thay cho String
+  strcpy(data, (value == HIGH) ? "on" : "off"); 
   strcpy(data1, (value1 == HIGH) ? "on" : "off");
-  // if (value == HIGH)
-  // {
-  //   data = "on";
-  // }
-  // else // if(value == LOW)
-  // {
-  //   data = "off";
-  // }
-  // if (value1 == HIGH)
-  // {
-  //   data1 = "on";
-  // }
-  // else
-  // {
-  //   data1 = "off";
-  // }
 
   display.clearDisplay();
   display.setTextSize(1);
