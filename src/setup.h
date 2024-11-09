@@ -7,8 +7,8 @@
 #include <ERa/ERaTimer.hpp>
 #include <Wire.h>
 #include <SPI.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
+// #include <Adafruit_GFX.h>
+// #include <Adafruit_SSD1306.h>
 
 //_____________wifi congig_______________//
 #define BUTTON_PIN 0

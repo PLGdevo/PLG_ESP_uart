@@ -1,6 +1,5 @@
 #include <setup.h>
 
-
 char data[4] = "";
 char data1[4] = "";
 char datapic[4] = "";
@@ -13,7 +12,7 @@ void khung_oled()
   display.drawLine(0, 20, 128, 20, SSD1306_WHITE); //__ hang 2
   display.drawLine(0, 30, 128, 30, SSD1306_WHITE); //__ hang 3
   display.drawLine(0, 40, 128, 40, SSD1306_WHITE); //__ hang 4
-  display.drawLine(34, 0, 34, 64, SSD1306_WHITE);  // |
+  display.drawLine(34, 0, 34, 40, SSD1306_WHITE);  // |
 }
 void exeCmd(String message)
 {
@@ -22,7 +21,14 @@ void exeCmd(String message)
     // display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
     delay(200);
     SENTLN("d");
-    ERa.virtualWrite(V0, value);
+    ERa.virtualWrite(V0, value = 0);
+  }
+  if (message.startsWith("reset"))
+  {
+    display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+    // delay(200);
+    SENTLN((value == HIGH) ? "f" : "d");
+    SENTLN((value1 == HIGH) ? "R2 1" : "R2 0");
   }
 }
 void uartPIC()
@@ -42,7 +48,7 @@ void uartPIC()
 }
 void oled()
 {
-  strcpy(data, (value == HIGH) ? "on" : "off"); 
+  strcpy(data, (value == HIGH) ? "on" : "off");
   strcpy(data1, (value1 == HIGH) ? "on" : "off");
 
   display.clearDisplay();
@@ -61,7 +67,6 @@ void oled()
   display.println(data);
   display.setCursor(35, 20);
   display.println(data1);
-
   khung_oled();
   display.display();
 }
@@ -87,18 +92,6 @@ void setup()
 
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
   display.clearDisplay();
-  display.setTextSize(1);
-  display.setRotation(2);
-  display.setTextColor(SSD1306_WHITE);
-  display.setCursor(0, 0);
-  display.println(F("PLG"));
-  display.setCursor(35, 0);
-  display.println("CONNECT_STA");
-  display.setCursor(0, 10);
-  display.println("ssid:");
-  display.setCursor(0, 20);
-  display.println("pass:");
-  khung_oled();
   display.display();
 
   DEBUG_PRINT("-----------------PLG_start_oled----------\n\r");
@@ -115,6 +108,8 @@ void setup()
   delay(1000);
   SENTLN("R2 0");
   SENTLN("d");
+  ERa.virtualWrite(V0, value = 0);
+  ERa.virtualWrite(V1, value1 = 0);
 }
 
 void loop()
