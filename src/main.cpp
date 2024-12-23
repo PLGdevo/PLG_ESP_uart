@@ -6,13 +6,15 @@ char datapic[4] = "";
 uint8_t value1;
 uint8_t value;
 String cmd = "";
+float temperature = 0.0;
+float humidity = 0.0;
 void khung_oled()
 {
   display.drawLine(0, 10, 128, 10, SSD1306_WHITE); //__ hang 1
   display.drawLine(0, 20, 128, 20, SSD1306_WHITE); //__ hang 2
   display.drawLine(0, 30, 128, 30, SSD1306_WHITE); //__ hang 3
   display.drawLine(0, 40, 128, 40, SSD1306_WHITE); //__ hang 4
-  display.drawLine(34, 0, 34, 40, SSD1306_WHITE);  // |
+  display.drawLine(34, 0, 34, 64, SSD1306_WHITE);  // |
 }
 void exeCmd(String message)
 {
@@ -30,6 +32,28 @@ void exeCmd(String message)
     SENTLN((value == HIGH) ? "f" : "d");
     SENTLN((value1 == HIGH) ? "R2 1" : "R2 0");
   }
+  if (message.startsWith("DHT22"))
+  {
+    int tempIndex = message.indexOf("Temp = ");
+    int endIndex = message.indexOf("C", tempIndex);
+    if (tempIndex != -1 && endIndex != -1)
+    {
+      temperature = message.substring(tempIndex + 7, endIndex - 1).toFloat(); // Trích xuất và chuyển đổi
+      DEBUG_PRINT("Temperature: ");
+      DEBUG_PRINTLN(temperature);
+      ERa.virtualWrite(V4,temperature);
+    }
+    // Tìm và lấy giá trị độ ẩm
+    int humIndex = message.indexOf("RH   = ");
+    int humEndIndex = message.indexOf("%", humIndex);
+    if (humIndex != -1 && humEndIndex != -1)
+    {
+      humidity = message.substring(humIndex + 7, humEndIndex - 1).toFloat();
+      DEBUG_PRINT("Humidity: ");
+      DEBUG_PRINTLN(humidity);
+      ERa.virtualWrite(V5,humidity);
+    }
+  }
 }
 void uartPIC()
 {
@@ -40,8 +64,8 @@ void uartPIC()
     if (c == '\n')
     {
       exeCmd(cmd);
-      DEBUG_PRINTLN(" PIC_gui");
-      DEBUG_PRINTF("%s", cmd);
+      // DEBUG_PRINTLN(" PIC_gui");
+      // DEBUG_PRINTLN(cmd);
       cmd = "";
     } // end read uart2
   }
@@ -63,10 +87,18 @@ void oled()
   display.println("RN1");
   display.setCursor(0, 20);
   display.println("RN2");
+  display.setCursor(0, 30);
+  display.println("temp");
+  display.setCursor(0, 40);
+  display.println("hum");
   display.setCursor(35, 10);
   display.println(data);
   display.setCursor(35, 20);
   display.println(data1);
+  display.setCursor(40, 31);
+  display.println(temperature);
+  display.setCursor(40, 41);
+  display.println(humidity);
   khung_oled();
   display.display();
 }
@@ -83,6 +115,14 @@ ERA_WRITE(V1)
   DEBUG_PRINTLN("--------------write data R2------------- ");
   DEBUG_PRINTLN(value1);
   SENTLN((value1 == HIGH) ? "R2 1" : "R2 0");
+}
+ERA_WRITE(V4)
+{
+  ERa.virtualWrite(V4,temperature);
+}
+ERA_WRITE(V5)
+{
+  ERa.virtualWrite(V5,humidity);
 }
 
 void setup()
@@ -150,6 +190,7 @@ void loop()
 // //       delay(100);
 
 // //     }
+//      }
 // void handle_message(String message)
 // {
 //     lastCmdTime = millis();

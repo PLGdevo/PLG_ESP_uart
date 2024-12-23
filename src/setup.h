@@ -1,3 +1,4 @@
+#define DEBUG
 #define ERA_DEBUG
 #define DEFAULT_MQTT_HOST "mqtt1.eoh.io"
 #define ERA_AUTH_TOKEN "d58ef8ad-326a-4889-844a-39a16fdcb75b"
@@ -99,10 +100,15 @@ void timerEvent()
 // /**************************************************************
 //  *                UART1                                       *
 //  **************************************************************/
-
+#if defined(DEBUG)
 #define DEBUG_PRINT(...) Serial.print(__VA_ARGS__)     // Định nghĩa hàm in ra thông tin debug
 #define DEBUG_PRINTLN(...) Serial.println(__VA_ARGS__) // Định nghĩa hàm in ra thông tin debug kèm xuống dòng
 #define DEBUG_PRINTF(...) Serial.printf(__VA_ARGS__)   // Định nghĩa hàm in ra thông tin debug theo định dạng
+#else
+#define DEBUG_PRINT(...) // Nếu không ở chế độ DEBUG, không làm gì cả
+#define DEBUG_PRINTLN(...)
+#define DEBUG_PRINTF(...)
+#endif
 // /**************************************************************
 //  *                UART_2                                      *
 //  **************************************************************/
